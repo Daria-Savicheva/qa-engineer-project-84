@@ -1,0 +1,172 @@
+---
+test-cases:
+- summary: |
+     Наличие и корректное отображение карточек товаров
+  status: fail
+
+- summary: |
+    Постраничный просмотр товаров
+  status: pass
+
+- summary: |
+    Фильтрация каталога по категориям товаров
+  status: fail
+
+- summary: |
+    Просмотр страницы товара
+  status: pass
+
+- summary: |
+   Возврат в каталог со страницы товара
+  status: fail
+
+- summary: |
+    Поиск по ключевому слову
+  status: fail
+
+- summary: |
+    Поиск по категории
+  status: fail
+
+- summary: |
+    Добавление товара в корзину из каталога
+  status: pass
+
+- summary: |
+    Изменение содержимого корзины
+  status: fail
+
+- summary: |
+    Возврат из корзины к каталогу
+  status: pass
+
+- summary: |
+    Покупка товара
+  status: fail
+
+- summary: |
+    Проверка кросбраузерности
+  status: pass
+
+- summary: |
+    Проверка мобильной версии сайта
+  status: fail
+
+- summary: |
+    Адаптивность сайта
+  status: pass
+
+- summary: |
+    Сайт разработан как SPA
+  status: pass
+
+bugreports: 
+- summary: |
+   Наличие и корректное отображение карточек товаров
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+  expected-result: |
+    В карточке товара отображается рейтинг товара
+  actual-result: |
+    В карточке товара не отображается рейтинг товара
+
+  - summary: |
+    Фильтрация каталога по категориям товаров
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Выбрать категорию товара sunglasses
+  expected-result: |
+    Пользователь видит все товары в категории sunglasses
+  actual-result: |
+    В каталоге отсутствует данная категория.
+    Категории отображаются только для товаров на странице, которую просматривает пользователь
+
+  - summary: |
+   Возврат в каталог со страницы товара
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Перейти на страницу любого товара
+  expected-result: |
+    В карточке товара отображается кнопка возврата к каталогу
+  actual-result: |
+    В карточке товара отображается кнопка возврата к каталогу
+  
+  - summary: |
+   Поиск по ключевому слову
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. В поле поиска указать ключевое слово (sunglasses)
+  expected-result: |
+    Пользователь видит все товары в информации о которых указано ключевое слово
+  actual-result: |
+    Поиск не сработал. Пользователь видит все товары
+
+  - summary: |
+   Поиск по категории
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. В поле поиска указать одно из названий категорий
+  expected-result: |
+    Пользователь видит все товары данной категории
+  actual-result: |
+    Поиск не сработал. Пользователь видит все товары
+
+  - summary: |
+   Изменение содержимого корзины
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Добавить 1 товар - 1 шт
+    3. Добавить 2 товар - 2 шт
+    4. Перейти в корзину
+    5. Изменить количество любого товара на + 1
+  expected-result: |
+    Пользователь может редактирова количество шт товаров
+  actual-result: |
+    Отсутствует возможность изменять количество товаров в большую сторону в корзине.
+    Уменьшение количества товаров происходить через кнопку DELETE, кнопка редактировать отсутствует
+  
+  - summary: |
+   Покупка товара
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Добавить 1 товар - 1 шт
+    3. Перейти в корзину
+    4. Оформить заказ
+  expected-result: |
+    Пользователь может оформить заказ
+  actual-result: |
+    Отсутствует возможность оформления заказа
+
+  - summary: |
+   Проверка мобильной версии сайта
+  environment: |
+    Google Chrome Версия 119.0.6045.105 (Официальная сборка), (arm64)
+    macOS Sonoma версия 14.0
+  steps-to-reproduce: |
+    1. Зайти на страницу с мобильного устройства https://hexlet-products-store.vercel.app/
+    2. Автоматическое перенаправление на мобильную версию 
+  expected-result: |
+    Пользователь со смартфона просматривает мобильную версию сайта
+  actual-result: |
+    Отсутствует мобильная версия
