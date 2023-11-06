@@ -1,60 +1,60 @@
 ---
 - summary: |
-  Наличие и корректное отображение карточек товаров
-status: fail
+    Наличие и корректное отображение карточек товаров
+  status: fail
 
 - summary: |
-  Постраничный просмотр товаров
-status: pass
+    Постраничный просмотр товаров
+  status: pass
 
 - summary: |
-  Фильтрация каталога по категориям товаров
-status: pass
+    Фильтрация каталога по категориям товаров
+  status: pass
 
 - summary: |
-Просмотр страницы товара
-status: pass
+    Просмотр страницы товара
+  status: pass
 
 - summary: |
-  Возврат в каталог со страницы товара
-status: fail
+    Возврат в каталог со страницы товара
+  status: fail
 
 - summary: |
-Поиск по ключевому слову
-status: fail
+    Поиск по ключевому слову
+  status: fail
 
 - summary: |
-  Поиск по категории
-status: fail
+    Поиск по категории
+  status: fail
 
 - summary: |
-  Добавление товара в корзину из каталога
-status: pass
+    Добавление товара в корзину из каталога
+  status: pass
 
 - summary: |
-  Изменение содержимого корзины
-status: fail
+    Изменение содержимого корзины
+  status: fail
 
 - summary: |
-  Возврат из корзины к каталогу
-status: pass
+    Возврат из корзины к каталогу
+  status: pass
 
 - summary: |
-  Покупка товара
-status: fail
+    Покупка товара
+  status: fail
 
 - summary: |
-  Проверка кросбраузерности
-status: pass
+    Проверка кросбраузерности
+  status: pass
 
 - summary: |
-  Проверка мобильной версии сайта
-status: fail
+    Проверка мобильной версии сайта
+  status: fail
 
 - summary: |
-  Адаптивность сайта
-status: fail
+    Адаптивность сайта
+  status: fail
 
 - summary: |
-  Сайт разработан как SPA
-status: pass
+    Сайт разработан как SPA
+  status: pass
