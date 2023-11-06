@@ -36,10 +36,6 @@ status: pass
 status: fail
 
 - summary: |
-  Изменение содержимого корзины
-status: fail
-
-- summary: |
   Возврат из корзины к каталогу
 status: pass
 
